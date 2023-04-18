@@ -45,7 +45,7 @@ void dong_thoi_gian(Idol idol, int nam_troi_qua)
         idol.can_nang += +2;
     }
     std::string ket_qua = chi_so_BMI(idol);
-    std::cout << "Ban" << idol.ho_ten << "sau" << nam_troi_qua << ket_qua;
+    std::cout << "Ban " << idol.ho_ten << " sau " << nam_troi_qua << ket_qua;
 }
 int main()
 {
