@@ -69,8 +69,8 @@ int main()
 {
     //  \n: như xuống dòng mới == "<<std::endl"
     //  \t: tab ra 1 khoảng cánh đều nhau Tạo table ngang 
-    // std::cout << "Hello world!\n"  ;
-    // std::cout << "I`m super"<< std::endl;
+    std::cout << "Hello world!\n"  ;
+    std::cout << "I`m super"<< std::endl;
 
     // // biến : variables
     // // int (số nguyên), double(số thập phân có dấu phẩy), char(chứ 1 ký tự 'A'), string(chuỗi ký tự "thanh Nhã"), bool (chứa true or false) 
@@ -180,41 +180,41 @@ int main()
     // cout << result << endl;
 
     //Gọi hàm khởi tạo đối tượng  Car
-    // Car carObj1("BMW", "I8", 2009);
-    // cout << carObj1.brand<< " "<< carObj1.modal << " " << carObj1.yead << endl;
+    Car carObj1("BMW", "I8", 2009);
+    cout << carObj1.brand<< " "<< carObj1.modal << " " << carObj1.yead << endl;
 
   //
-  // Programmer programmer;
-  // programmer.setSalary(5000);
-  // programmer.bonus =1500;
-  // cout << "Salary: " << programmer.getSalary()<< endl;
-  // cout << "Bonus: " << programmer.bonus << endl; 
+  Programmer programmer;
+  programmer.setSalary(5000);
+  programmer.bonus =1500;
+  cout << "Salary: " << programmer.getSalary()<< endl;
+  cout << "Bonus: " << programmer.bonus << endl; 
     
 
     // file 
     // #include <fstream>
     // Tạo ra 1 file mới .txt
-    // ofstream myFile("myFile.txt");
+    ofstream myFile("myFile.txt");
 
     // // viết vào file 
-    // myFile << "Thanh Nhã đẹp trai quá vậy! \n";
-    // myFile << "Thanh Nhã đẹp trai quá vậy! \n";
-    // myFile << "Thanh Nhã đẹp trai quá vậy! \n";
+    myFile << "Thanh Nhã đẹp trai quá vậy! \n";
+    myFile << "Thanh Nhã đẹp trai quá vậy! \n";
+    myFile << "Thanh Nhã đẹp trai quá vậy! \n";
 
     // // Đóng file 
-    // myFile.close();
+    myFile.close();
     // // khai báo 1 biến để lưu giá trị cho từng dòng mà file đã đọc được
-    // string text;
+    string text;
     // // Đọc file từ .txt đã tạo
-    // ifstream myReadFile("myFile.txt");
+    ifstream myReadFile("myFile.txt");
 
     // // Dọc qua từng dòng của file text để lấy ra data
 
-    // while (getline(myReadFile, text)) {
-    //   cout << text<< endl;
-    // }
+    while (getline(myReadFile, text)) {
+      cout << text<< endl;
+    }
     // // đóng file đọc 
-    // myReadFile.close();
+    myReadFile.close();
 
     // try catch : exceptions
     try {
