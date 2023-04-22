@@ -1,6 +1,8 @@
 #include <iostream>
 // thư viện cho stirng 
 #include <string>
+// thư viên thao tác với file 
+#include <fstream>
 using namespace std;
 
 void swapNums(int x, int y) {
@@ -24,6 +26,45 @@ int sum (int k) {
     }
     return result;
 }
+
+// Khởi tạo Constructor Parameters
+class Car{
+  public:
+    string brand;
+    string modal;
+    int yead;
+    Car(string b, string m, int y);
+    // {
+    //   brand = b;
+    //   modal = m;
+    //   yead = y;
+    // }
+};
+
+Car::Car(string b, string m, int y){
+  brand = m;
+  modal = b;
+  yead = y;
+}
+
+class Employee{
+  protected: 
+    int salary;
+  public:
+    void setSalary(int s) {
+      salary = s;
+    }
+};
+
+class Programmer: public Employee {
+  public: 
+    int bonus;
+    
+    int getSalary() {
+      return salary;
+    }
+
+};
 int main()
 {
     //  \n: như xuống dòng mới == "<<std::endl"
@@ -135,8 +176,58 @@ int main()
     // cout << firstNum << secondNum << "\n";    
 
 
-    int result = sumDeQui(10);
-    cout << result << endl;
-        
+    // int result = sumDeQui(10);
+    // cout << result << endl;
+
+    //Gọi hàm khởi tạo đối tượng  Car
+    // Car carObj1("BMW", "I8", 2009);
+    // cout << carObj1.brand<< " "<< carObj1.modal << " " << carObj1.yead << endl;
+
+  //
+  // Programmer programmer;
+  // programmer.setSalary(5000);
+  // programmer.bonus =1500;
+  // cout << "Salary: " << programmer.getSalary()<< endl;
+  // cout << "Bonus: " << programmer.bonus << endl; 
+    
+
+    // file 
+    // #include <fstream>
+    // Tạo ra 1 file mới .txt
+    // ofstream myFile("myFile.txt");
+
+    // // viết vào file 
+    // myFile << "Thanh Nhã đẹp trai quá vậy! \n";
+    // myFile << "Thanh Nhã đẹp trai quá vậy! \n";
+    // myFile << "Thanh Nhã đẹp trai quá vậy! \n";
+
+    // // Đóng file 
+    // myFile.close();
+    // // khai báo 1 biến để lưu giá trị cho từng dòng mà file đã đọc được
+    // string text;
+    // // Đọc file từ .txt đã tạo
+    // ifstream myReadFile("myFile.txt");
+
+    // // Dọc qua từng dòng của file text để lấy ra data
+
+    // while (getline(myReadFile, text)) {
+    //   cout << text<< endl;
+    // }
+    // // đóng file đọc 
+    // myReadFile.close();
+
+    // try catch : exceptions
+    try {
+    int age = 15;
+    if (age >= 18) {
+      cout << "Access granted - you are old enough.";
+    } else {
+      throw 505;
+    }
+    }
+    catch (...) {
+    cout << "Access denied - You must be at least 18 years old.\n";
+   
+    }
     return 0;
 }
